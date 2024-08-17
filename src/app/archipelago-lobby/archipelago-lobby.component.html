@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <h1>Lobby: {{ serverAddress }}</h1>
+  </div>
+  <div class="card-body">
+    @if (isConnected) {
+      <ol class="lobby-slots">
+        @for (player of players; track player.slot) {
+          <li class="lobby-slot" [class.active]="player.slot === slot_number">
+            <div class="lobby-slot-name">{{ player.name }}</div>
+            <div class="lobby-slot-game">{{ player.game }}</div>
+          </li>
+        } @empty {
+          <li>There are no players in this lobby.</li>
+        }
+      </ol>
+    } @else {
+      <div class="msg-error">Not connected to server</div>
+    }
+  </div>
+  <div class="card-footer"></div>
+</div>
