@@ -10,7 +10,8 @@ export class ArchipelagoServiceService {
   @Output() roomInfo: EventEmitter<ServerPacket> = new EventEmitter<ServerPacket>();
   @Output() connectionRefused: EventEmitter<ServerPacket> = new EventEmitter<ServerPacket>();
 
-  GAME_NAME: string = "Minecraft"; // "ARCHIPELAGO_BROWSERGAME";
+  //GAME_NAME: string = "SettlersOfTheArchipelago";
+  GAME_NAME: string = "Minecraft";
 
   private client: Client;
 

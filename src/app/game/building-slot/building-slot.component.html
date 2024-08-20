@@ -1,0 +1,20 @@
+<div class="building-slot">
+  <div class="building-slot-header">
+    <div class="building-image">
+      <img [src]="building?.buildingType?.image" class="!size-fit" />
+    </div>
+    <div class="building-name">
+      <h2>{{ building?.buildingType?.name }}</h2>
+    </div>
+    <div class="building-level">Lv. {{ building?.level }}</div>
+  </div>
+  <!-- <div class="building-description">{{ building?.buildingType?.description }}</div> -->
+
+  <div class="job-slots">
+    @for (settlerSlot of building?.settlerSlots; track settlerSlot) {
+      <div class="job-slot" [class.empty]="settlerSlot === undefined"></div>
+    } @empty {
+      <div class="msg-error">No Slots lol</div>
+    }
+  </div>
+</div>

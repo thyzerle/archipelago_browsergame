@@ -48,7 +48,7 @@ export class SetupScreenComponent {
         this.connectionErrorMessage = error;
       } else {
         this.saveToLocalStorage();
-        this.router.navigate(["/lobby"]);
+        this.router.navigate(["/game"]);
       }
     });
   }

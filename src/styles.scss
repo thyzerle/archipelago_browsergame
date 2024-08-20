@@ -4,11 +4,7 @@
 @tailwind utilities;
 
 main.main {
-  @apply flex h-screen flex-col dark:bg-gray-800 dark:text-white;
-}
-
-main > header {
-  @apply flex items-center justify-center bg-gray-100 dark:bg-gray-900;
+  @apply flex h-full min-h-screen flex-col bg-gray-200 text-black before:mt-12 dark:bg-gray-800 dark:text-white;
 }
 
 main > div.content {
@@ -51,12 +47,57 @@ button {
   }
 }
 
+// header.header has 3 columns, the left and right ones are growing, the middle one is fixed but centered independently of the other two
+header.header {
+  @apply fixed grid h-fit min-h-12 w-full grid-cols-3 bg-gray-200 py-2 shadow-md dark:bg-gray-900;
+
+  :first-child {
+    @apply col-span-1 items-center justify-start;
+  }
+
+  :nth-child(2) {
+    @apply col-span-1 flex items-center justify-center;
+  }
+
+  :last-child {
+    @apply col-span-1 flex items-center justify-end;
+  }
+}
+
+//#######################################################
+//#################### SIDEBAR ##########################
+//#######################################################
+
+.sidebar {
+  @apply fixed right-0 top-1/2 h-2/3 min-h-[32rem] w-1/4 min-w-[32rem] -translate-y-1/2 transform rounded-l-lg;
+
+  .sidebar-content {
+    @apply h-full w-full rounded-l-lg bg-gray-400 shadow-lg dark:bg-gray-600;
+  }
+}
+
+.sidebar-toggle {
+  @apply absolute top-1/2 flex -translate-y-1/2 transform items-center rounded-l-lg rounded-r-none bg-gray-400 dark:bg-gray-600;
+
+  &.open {
+    @apply right-0;
+  }
+
+  &.close {
+    @apply left-0 -translate-x-full transform;
+  }
+}
+
+//#######################################################
+//#################### LOBBY ############################
+//#######################################################
+
 .msg-error {
   @apply text-red-500 dark:text-red-400;
 }
 
 ol.lobby-slots {
-  @apply mt-4 w-full space-y-2;
+  @apply mt-4 w-full space-y-2 text-black dark:text-white;
 
   li.lobby-slot {
     @apply flex w-full items-center justify-between rounded-lg bg-gray-100 p-4 dark:bg-gray-600;
@@ -71,6 +112,57 @@ ol.lobby-slots {
 
     div.lobby-slot-game {
       @apply flex items-center;
+    }
+  }
+}
+
+//#######################################################
+//#################### GAME #############################
+//#######################################################
+
+//################## BUILDING SLOT ######################
+
+div.game {
+  @apply flex h-full w-full items-center justify-center;
+}
+
+div.building-slots {
+  @apply mx-2 flex w-1/4 min-w-[32rem] flex-col space-y-2;
+}
+
+div.building-slot {
+  @apply flex flex-col rounded-lg bg-gray-100 p-4 dark:bg-gray-600;
+
+  div.building-slot-header {
+    @apply grid grid-cols-[3rem_1fr] grid-rows-2;
+  }
+
+  div.building-image {
+    @apply row-span-2 mx-1 flex items-center;
+  }
+
+  div.building-level {
+    @apply text-left;
+  }
+
+  div.building-name {
+    @apply flex items-center;
+  }
+
+  div.building-description {
+    @apply flex items-center;
+  }
+
+  div.job-slots {
+    @apply mt-2 flex space-x-2;
+  }
+
+  div.job-slot {
+    // a square box with a border
+    @apply size-16 rounded-lg border bg-green-200;
+
+    &.empty {
+      @apply bg-gray-200 dark:bg-gray-300;
     }
   }
 }

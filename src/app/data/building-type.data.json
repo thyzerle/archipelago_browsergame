@@ -1,0 +1,65 @@
+{
+  "$schema": "./building-type.schema.json",
+  "buildingtypes": {
+    "HOUSE": {
+      "name": "House",
+      "description": "A place for your settlers to live.",
+      "image": "/buildings/house.svg"
+    },
+    "FARM": {
+      "name": "Farm",
+      "description": "A place to grow food.",
+      "image": "/buildings/wheat.svg"
+    },
+    "MINE": {
+      "name": "Mine",
+      "description": "A place to mine resources.",
+      "image": "/buildings/mine-wagon.svg"
+    },
+    "WOODCUTTER_HUT": {
+      "name": "Woodcutter Hut",
+      "description": "A place to cut wood.",
+      "image": "/buildings/forest-camp.svg"
+    },
+    "SAWMILL": {
+      "name": "Sawmill",
+      "description": "A place to process wood.",
+      "image": "/buildings/cleaver.svg"
+    },
+    "QUARRY": {
+      "name": "Quarry",
+      "description": "A place to process stone.",
+      "image": "/buildings/stone-pile.svg"
+    },
+    "BUTCHER": {
+      "name": "Butcher",
+      "description": "A place to process meat.",
+      "image": "/buildings/meat-cleaver.svg"
+    },
+    "BAKERY": {
+      "name": "Bakery",
+      "description": "A place to bake bread.",
+      "image": "/buildings/pretzel.svg"
+    },
+    "BLACKSMITH": {
+      "name": "Blacksmith",
+      "description": "A place to forge tools.",
+      "image": "/buildings/sword-smithing.svg"
+    },
+    "MARKET": {
+      "name": "Market",
+      "description": "A place to trade resources.",
+      "image": "/buildings/receive-money.svg"
+    },
+    "HARBOR": {
+      "name": "Harbor",
+      "description": "A place to trade resources by sea.",
+      "image": "/buildings/harbor-dock.svg"
+    },
+    "WAREHOUSE": {
+      "name": "Warehouse",
+      "description": "A place to store resources.",
+      "image": "/buildings/forklift.svg"
+    }
+  }
+}

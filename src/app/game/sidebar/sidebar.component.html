@@ -1,0 +1,16 @@
+<div class="sidebar">
+  @if (collapsed) {
+    <button class="sidebar-toggle open" (click)="toggleCollapse()">
+      <ng-icon name="heroChevronLeft" class="!size-6"></ng-icon>
+      <img src="archipelago.ico" alt="archipelago" width="32" height="32" />
+    </button>
+  } @else {
+    <button class="sidebar-toggle close" (click)="toggleCollapse()">
+      <img src="archipelago.ico" alt="archipelago" width="32" height="32" />
+      <ng-icon name="heroChevronRight" class="!size-6"></ng-icon>
+    </button>
+    <div class="sidebar-content">
+      <app-archipelago-lobby></app-archipelago-lobby>
+    </div>
+  }
+</div>

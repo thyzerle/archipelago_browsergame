@@ -1,0 +1,9 @@
+<div class="game">
+  <div class="building-slots">
+    @for (building of buildings; track building) {
+      <app-building-slot [building]="building"></app-building-slot>
+    }
+  </div>
+</div>
+
+<app-sidebar></app-sidebar>
