@@ -12,7 +12,7 @@ export class BuildingType {
   private constructor(name: string, description: string, image: string = "favicon.ico", cost: Map<ResourceType, number> = new Map()) {
     this.name = name;
     this.description = description;
-    this.image = image;
+    this.image = "/archipelago_browsergame" + image; // TODO remove hard-coded path use base-href build parameter
     this.cost = cost;
   }
 
